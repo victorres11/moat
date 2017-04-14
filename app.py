@@ -18,7 +18,7 @@ def process_inputs():
     if platform_input == 'y':
         response = make_response(TTD_tag)
         response.headers["Content-Disposition"] = "attachment; filename=TTD_DISPLAY_MOAT_%s.txt" % (agency_input)
-    else if platorm_input == 'n':
+    elif platform_input == 'n':
         response = make_response(APN_tag)
         response.headers["Content-Disposition"] = "attachment; filename=APN_DISPLAY_MOAT_%s.txt" % (agency_input)
 
