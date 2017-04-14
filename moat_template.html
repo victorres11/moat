@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <h1>MOAT</h1>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function validateForm() {
+      var platformInput = document.forms["moatForm"]["platform_input"].value;
+      if (['y','Y', 'n', 'N'].indexOf(platformInput) === -1) {
+          alert("Bad value for TTD");
+          return false;
+        }
+    }
+    </script>
+    <form action="/process_inputs" name="moatForm" onsubmit="return validateForm()">
+      Enter Agency Name: <input type="text" name="agency_input"><br>
+      TTD Y/N?           <input type="text" name="platform_input"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
